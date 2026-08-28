@@ -1,0 +1,29 @@
+{
+  "naming_line": "Example Medical, proposal Q10001, Example GC, Phoenix. Floors 1 and 2 go together.",
+  "project": "Example Medical",
+  "proposal_number": "Q10001",
+  "customer": "Example GC",
+  "location": "Phoenix",
+  "grouping_confirmed": true,
+  "proposal_date": "2026-08-28",
+  "plan_date": "2026-08-14",
+  "prepared_by": "Estimator Name",
+  "clauses_profile": "general_draft",
+  "clauses_approved": false,
+  "sections": [
+    {
+      "title": "Floors 1 and 2 — Accessories",
+      "kind": "accessories",
+      "source_files": [
+        "../tests/fixtures/floor-1-accessories.xlsx",
+        "../tests/fixtures/floor-2-accessories.xlsx"
+      ]
+    },
+    {
+      "title": "Floor 2 — Partitions",
+      "kind": "partitions",
+      "scope_summary": "(4) Stalls / Solid Phenolic / Overhead Braced",
+      "source_files": ["../tests/fixtures/floor-2-partitions.xlsx"]
+    }
+  ]
+}

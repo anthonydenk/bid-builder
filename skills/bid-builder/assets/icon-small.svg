@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Bid Builder">
+  <rect width="128" height="128" rx="24" fill="#17324D"/>
+  <path d="M29 28h45l25 25v47H29z" fill="#F7F3E8"/>
+  <path d="M74 28v25h25" fill="none" stroke="#D88A3D" stroke-width="8"/>
+  <path d="M43 68h42M43 82h34M43 96h25" stroke="#17324D" stroke-width="7" stroke-linecap="round"/>
+</svg>

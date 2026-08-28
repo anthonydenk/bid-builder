@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bid-builder"
+version = "0.1.0"
+description = "Deterministic CAD-export to commercial proposal workflow"
+requires-python = ">=3.10"
+dependencies = ["python-docx>=1.1,<2"]
+
+[project.scripts]
+bid-builder = "bid_builder:main"
+
+[tool.setuptools]
+py-modules = ["bid_builder"]
+package-dir = {"" = "skills/bid-builder/scripts"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

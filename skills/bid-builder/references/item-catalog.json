@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "id": "bobrick-b-6806-18",
+      "match": {"item": "B-6806.99X18"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-6806.99X18"
+    },
+    {
+      "id": "bobrick-b-6806-36",
+      "match": {"item": "B-6806.99X36"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-6806.99X36"
+    },
+    {
+      "id": "bobrick-b-6806-42",
+      "match": {"item": "B-6806.99X42"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-6806.99X42"
+    },
+    {
+      "id": "bobrick-b-2840",
+      "match": {"item": "B-2840"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-2840"
+    },
+    {
+      "id": "bobrick-b-4221",
+      "match": {"item": "B-4221"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-4221"
+    },
+    {
+      "id": "bobrick-b-43949",
+      "match": {"item": "B-43949"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-43949"
+    },
+    {
+      "id": "bobrick-b-165-2436",
+      "match": {"item": "B-165 2436"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-165 2436"
+    },
+    {
+      "id": "bobrick-b-35639",
+      "match": {"item": "B-35639"},
+      "public": true,
+      "manufacturer": "Bobrick Washroom Equipment",
+      "model": "B-35639"
+    },
+    {
+      "id": "asi-ac-100",
+      "match": {"item": "AC-100"},
+      "public": true,
+      "manufacturer": "ASI",
+      "model": "AC-100"
+    },
+    {
+      "id": "bobrick-ac-200",
+      "match": {"item": "AC-200"},
+      "public": true,
+      "manufacturer": "Bobrick",
+      "model": "AC-200"
+    },
+    {
+      "id": "kohler-14380-cp",
+      "match": {
+        "description_regex": "(?i)KOHLER\\s+14380-CP\\s+Soap Dispensers?"
+      },
+      "public": true,
+      "manufacturer": "Kohler",
+      "model": "14380-CP"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "bid-builder-private",
+  "interface": {
+    "displayName": "Bid Builder"
+  },
+  "plugins": [
+    {
+      "name": "bid-builder",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/anthonydenk/bid-builder.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

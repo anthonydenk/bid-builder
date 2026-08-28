@@ -1,0 +1,31 @@
+{
+  "name": "bid-builder",
+  "version": "0.1.0",
+  "description": "Turn CAD-exported Excel files into reconciled commercial bid proposals.",
+  "author": {
+    "name": "Anthony Denkinger",
+    "url": "https://github.com/anthonydenk"
+  },
+  "homepage": "https://github.com/anthonydenk/bid-builder#readme",
+  "repository": "https://github.com/anthonydenk/bid-builder",
+  "license": "Proprietary",
+  "keywords": ["estimating", "proposals", "cad", "excel", "construction"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Bid Builder",
+    "shortDescription": "CAD exports to checked bid proposals",
+    "longDescription": "Build customer-facing bid proposals from CAD-exported Excel workbooks, reconcile every section to the source totals, and stop when required job or scope facts are missing.",
+    "developerName": "Anthony Denkinger",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/anthonydenk/bid-builder",
+    "defaultPrompt": [
+      "Build a proposal from these CAD exports.",
+      "Reconcile these spreadsheets into one bid.",
+      "Create a checked proposal package."
+    ],
+    "brandColor": "#17324D",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

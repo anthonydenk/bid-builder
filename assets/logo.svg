@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-label="Bid Builder logo">
+  <rect width="640" height="160" rx="28" fill="#17324D"/>
+  <path d="M36 28h74l28 28v76H36z" fill="#F7F3E8"/>
+  <path d="M110 28v28h28" fill="none" stroke="#D88A3D" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M55 75h63M55 93h52M55 111h40" stroke="#17324D" stroke-width="8" stroke-linecap="round"/>
+  <text x="174" y="99" fill="#F7F3E8" font-family="Arial, Helvetica, sans-serif" font-size="61" font-weight="700">BID BUILDER</text>
+</svg>

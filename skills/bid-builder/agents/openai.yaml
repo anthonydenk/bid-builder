@@ -1,0 +1,10 @@
+interface:
+  display_name: "Bid Builder"
+  short_description: "Turn CAD exports into checked proposals"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#17324D"
+  default_prompt: "Use $bid-builder to turn these CAD-exported spreadsheets into a reconciled bid proposal."
+
+policy:
+  allow_implicit_invocation: true

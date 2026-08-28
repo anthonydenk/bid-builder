@@ -1,0 +1,16 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+dist/
+build/
+tmp/
+outputs/
+*.local.json
+*.inspect.ndjson
+
+# Client inputs and generated bids never belong in source control.
+client-data/
+private/

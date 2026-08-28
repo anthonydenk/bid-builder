@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "status": "needs_company_review",
+  "profiles": {
+    "general_draft": [
+      "Pricing is based on the drawings, specifications, addenda, and written clarifications identified in this proposal.",
+      "Work not expressly included in this proposal is excluded.",
+      "Changes in scope, schedule, access, quantities, or site conditions may require a written change order.",
+      "Final field dimensions, backing, blocking, utilities, and substrate conditions are by others unless expressly included.",
+      "Taxes, bonds, permits, testing, special inspections, and prevailing-wage requirements are excluded unless expressly included.",
+      "Material lead times and pricing are subject to manufacturer availability and written acceptance of this proposal."
+    ]
+  }
+}
