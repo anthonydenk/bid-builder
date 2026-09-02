@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bid-builder"
-version = "0.1.0"
+version = "0.2.0"
 description = "Deterministic CAD-export to commercial proposal workflow"
 requires-python = ">=3.10"
 dependencies = ["python-docx>=1.1,<2"]

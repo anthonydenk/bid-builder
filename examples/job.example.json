@@ -8,11 +8,15 @@
   "proposal_date": "2026-08-28",
   "plan_date": "2026-08-14",
   "prepared_by": "Estimator Name",
+  "attention": "Project Manager",
+  "email": "pm@example.invalid",
+  "phone": "555-0100",
   "clauses_profile": "general_draft",
   "clauses_approved": false,
   "sections": [
     {
       "title": "Floors 1 and 2 — Accessories",
+      "group_title": "Example Medical - Floors 1 & 2",
       "kind": "accessories",
       "source_files": [
         "../tests/fixtures/floor-1-accessories.xlsx",
@@ -21,8 +25,11 @@
     },
     {
       "title": "Floor 2 — Partitions",
+      "group_title": "Example Medical - Floors 1 & 2",
       "kind": "partitions",
+      "manufacturer": "Accurate",
       "scope_summary": "(4) Stalls / Solid Phenolic / Overhead Braced",
+      "installation_basis": "Furnished & Installed",
       "source_files": ["../tests/fixtures/floor-2-partitions.xlsx"]
     }
   ]

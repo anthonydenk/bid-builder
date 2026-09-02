@@ -6,11 +6,15 @@ The short trigger is **Bid Builder**. In Codex, invoke it as `$bid-builder`. In 
 
 ## The first question is intentional
 
-After you trigger Bid Builder and attach spreadsheets, it always asks for a naming and grouping line before touching the files:
+After you trigger Bid Builder and attach spreadsheets, it asks for one complete intake packet before touching workbook contents. The packet includes:
 
-> Please provide the job naming and grouping line in this format: `Falcon A, proposal B212492, GCON, Mesa. Floors 1 and 2 go together. Suite 126 is separate.`
+- job naming, proposal numbers, and grouping;
+- proposal date and plans-dated date;
+- prepared-by contact;
+- partition manufacturer, count, material, mounting/brace style, and installation basis; and
+- whether the stored company terms are approved or draft-only.
 
-That line is the source of truth for the project, proposal number, customer, location, and grouping. Filenames are not trusted to make those decisions.
+The packet shows the Falcon example as the naming pattern. Every separate proposal needs its own confirmed proposal number. Filenames are not trusted to make those decisions.
 
 ## What it does
 
@@ -66,8 +70,8 @@ Restart the ChatGPT desktop app and use a new task. The repo contains both `.cod
 1. Finish the takeoff/specification in CAD.
 2. Export each relevant area to `.xlsx`.
 3. Trigger Bid Builder and attach the exports.
-4. Answer the mandatory naming/grouping question.
-5. Confirm the short intake summary and supply any missing plan date, partition description, or catalog mapping.
+4. Answer the single mandatory intake packet—including dates, preparer, partition scope, and terms approval.
+5. Confirm the short intake summary. Only spreadsheet-specific exceptions, such as an unknown accessory manufacturer, should surface afterward.
 6. Review the reconciliation report and generated proposal.
 
 The proposal is marked `DRAFT — NOT FOR ISSUE` until the company has approved its clause profile. That is deliberate: exclusions and contract language are business/legal policy, not facts the model should invent.

@@ -13,6 +13,9 @@
     "proposal_date": {"type": ["string", "null"]},
     "plan_date": {"type": ["string", "null"]},
     "prepared_by": {"type": ["string", "null"]},
+    "attention": {"type": ["string", "null"]},
+    "email": {"type": ["string", "null"]},
+    "phone": {"type": ["string", "null"]},
     "clauses_profile": {"type": "string", "default": "general_draft"},
     "clauses_approved": {"type": "boolean", "default": false},
     "sections": {
@@ -23,9 +26,12 @@
         "required": ["title", "kind", "source_files"],
         "properties": {
           "title": {"type": "string"},
+          "group_title": {"type": ["string", "null"]},
           "kind": {"enum": ["accessories", "partitions", "other"]},
           "source_files": {"type": "array", "minItems": 1, "items": {"type": "string"}},
-          "scope_summary": {"type": ["string", "null"]}
+          "scope_summary": {"type": ["string", "null"]},
+          "manufacturer": {"type": ["string", "null"]},
+          "installation_basis": {"enum": ["Furnished Only", "Furnished & Installed", null]}
         }
       }
     }

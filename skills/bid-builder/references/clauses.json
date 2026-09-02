@@ -1,14 +1,36 @@
 {
-  "version": 1,
+  "version": 2,
   "status": "needs_company_review",
   "profiles": {
-    "general_draft": [
-      "Pricing is based on the drawings, specifications, addenda, and written clarifications identified in this proposal.",
-      "Work not expressly included in this proposal is excluded.",
-      "Changes in scope, schedule, access, quantities, or site conditions may require a written change order.",
-      "Final field dimensions, backing, blocking, utilities, and substrate conditions are by others unless expressly included.",
-      "Taxes, bonds, permits, testing, special inspections, and prevailing-wage requirements are excluded unless expressly included.",
-      "Material lead times and pricing are subject to manufacturer availability and written acceptance of this proposal."
-    ]
+    "general_draft": {
+      "quote_valid_days": 30,
+      "tax_note": "*Pricing excludes taxes*",
+      "payment_heading": "NON CREDIT CUSTOMERS:",
+      "payment_intro": "In order to set up your job our payment terms are as follows:",
+      "payment_terms": [
+        "If paying by check - 100% is due up front.",
+        "If paying by credit card - 50% is due up front and P&A Co. runs the balance of the job the day prior to install. A 3% fee will be added to contracts over $3,000.00."
+      ],
+      "escalation_heading": "Proposal Expiration & Potential Escalation",
+      "escalation_paragraphs": [
+        "Proposal is valid for 30 days from date of submission for acceptance via receipt of written LOI, NTP, or Contract with material purchases occurring within 90 days and immediate delivery to jobsite.",
+        "If material ordering cannot occur prior to 90 days an escalation cost of up to 15% may be implemented due to unpredictable and rapid increases in material and freight costs. Additional escalation charges up to 15% may be implemented every 90 days thereafter."
+      ],
+      "exclusion_intro": "All items not specifically listed in scope of work are expressly excluded, along with the items listed below.",
+      "exclusions": [
+        "Backing, blocking, and cutouts.",
+        "Field verification of backing and cutouts; requirements are included with the submittal package.",
+        "Hand dryer installation.",
+        "Partitions & Accessories Co. warranty for hand dryers; warranty requests must be communicated directly with the manufacturer.",
+        "Third-party fire extinguisher certifications.",
+        "Consumable products including paper products, batteries, hand soap, and antibacterial lotions.",
+        "Electrical connections, low and high voltage."
+      ],
+      "price_warning": "Pricing above is subject to change due to manufacturer price increases.",
+      "partition_note": "Full-height hinge/bracket systems for toilet partitions require a flat and level wall surface for the full height of the system. Partitions & Accessories Co. is not responsible for gaps created by different wall elevations or material transitions.",
+      "additional_exclusions": "Waiver of subrogation, bonds, cutouts, backing, blocking, field verification, liquidated damages, tackable wall panels, hand dryer installation, owner-furnished accessory installation, demolition, reinstallation of existing partitions and accessories, structural/header support, drilling or tapping steel, sway braces/support systems, and pocket doors.",
+      "order_instruction": "To place the order, please sign and return a copy to us for processing.",
+      "footer_terms": "Customers without an open account or where material is non-stock may be required to pay 50% down. Credit customers are subject to approved account terms. This quotation is based on the plans identified above and is subject to revision for later addenda, bulletins, amendments, scope changes, manufacturer availability, freight conditions, or delays beyond our control. The purchaser is responsible for unloading, storage, and documenting freight shortage or damage. Collection costs and applicable late charges are the purchaser's responsibility. Venue is Maricopa County, Arizona."
+    }
   }
 }

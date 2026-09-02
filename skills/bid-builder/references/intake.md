@@ -1,8 +1,28 @@
-# Intake gate
+# Complete first-pass intake gate
 
-## Required naming and grouping line
+## Ask once, before workbook analysis
 
-Before reading newly attached spreadsheets, require one natural-language line that establishes:
+The first response after spreadsheets are attached must collect every predictable proposal blocker together. Do not ask only for the naming line and reveal dates, preparer, terms approval, or partition scope as blockers after processing.
+
+Use this exact packet, pre-filling only facts the user already supplied:
+
+> Before I process the spreadsheets, please send this intake block:
+>
+> **JOB / GROUPING:** `Falcon A, proposal B212492, GCON, Mesa. Floors 1 and 2 go together. Suite 126 is separate.` Give every separate proposal its own confirmed proposal number.
+>
+> **PROPOSAL DATE:** Date shown on the proposal.
+>
+> **PLANS DATED:** Drawing or plan date the price is based on.
+>
+> **PREPARED BY:** Name, phone, and email if used.
+>
+> **PARTITIONS:** One line per partition group: `[group] | By: [manufacturer] | Scope: ([count]) Stalls / [material] / [mounting or brace] | Furnished Only or Furnished & Installed`. Write `N/A` if there are no partitions.
+>
+> **PROPOSAL TERMS:** `APPROVED - use company standard terms` or `DRAFT - terms have not been company-approved`.
+>
+> **OPTIONAL CONTACT:** Attention, email, and phone for the customer block, if available.
+
+The `JOB / GROUPING` line establishes:
 
 1. project name;
 2. proposal number;
@@ -10,28 +30,23 @@ Before reading newly attached spreadsheets, require one natural-language line th
 4. city/location; and
 5. which floor, suite, phase, or building exports belong in each proposal.
 
-Use this exact prompt when the line is absent:
-
-> Please provide the job naming and grouping line in this format: `Falcon A, proposal B212492, GCON, Mesa. Floors 1 and 2 go together. Suite 126 is separate.`
-
 The example means two outputs:
 
 - Proposal B212492 for Falcon A / GCON / Mesa, combining Floors 1 and 2.
 - A separate proposal group for Suite 126. If it needs a distinct proposal number or customer-facing title, ask for it.
 
-Never infer the grouping from filenames. Never silently reuse a proposal number for a separate group.
+Never infer the grouping from filenames. Never silently reuse a proposal number for a separate group. A separate proposal without a proposal number is incomplete at intake, not a late-stage blocker.
 
-## Follow-up facts
+## Completion rules
 
-After confirming grouping, collect only facts that remain missing:
+Before opening workbook contents, require:
 
 - proposal date;
 - plan date;
 - prepared-by name and contact block;
 - customer contact/address if required by the template;
-- explicit partition scope description;
-- unresolved manufacturer mappings;
-- approved clause profile; and
+- explicit partition manufacturer, stall count, material, mounting/brace style, and furnished/install basis for every partition group;
+- an explicit choice between approved standard terms and draft-only terms; and
 - tax, bond, permit, freight, installation, or escalation treatment when company policy requires it.
 
-Restate assumptions as a compact checklist before generation.
+Customer attention, email, and phone may remain blank if unavailable. Manufacturer mappings for accessory item numbers are data-dependent and may still surface after workbook analysis. Restate the completed intake as a compact checklist before generation.

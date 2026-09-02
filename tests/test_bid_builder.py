@@ -29,14 +29,18 @@ class BidBuilderTests(unittest.TestCase):
         self.assertEqual(Decimal("340.00"), bid_builder.money(sum((r.net_price for r in rows), Decimal("0"))))
         self.assertEqual([], [issue for row in rows for issue in bid_builder.validate_row(row)])
 
-    def test_skill_requires_exact_naming_prompt_before_processing(self):
+    def test_skill_collects_complete_intake_packet_before_processing(self):
         skill = (ROOT / "skills/bid-builder/SKILL.md").read_text()
-        expected = (
-            "Please provide the job naming and grouping line in this format: "
-            "`Falcon A, proposal B212492, GCON, Mesa. Floors 1 and 2 go together. "
-            "Suite 126 is separate.`"
-        )
-        self.assertIn(expected, skill)
+        for label in (
+            "JOB / GROUPING:",
+            "PROPOSAL DATE:",
+            "PLANS DATED:",
+            "PREPARED BY:",
+            "PARTITIONS:",
+            "PROPOSAL TERMS:",
+        ):
+            self.assertIn(label, skill)
+        self.assertIn("before analyzing workbook contents", skill)
 
     def test_catalog_can_expose_product_encoded_as_freight(self):
         rows, _ = bid_builder.read_export(self.fixture_dir / "floor-2-accessories.xlsx")
@@ -72,7 +76,9 @@ class BidBuilderTests(unittest.TestCase):
                 {
                     "title": "Floor 2 — Partitions",
                     "kind": "partitions",
+                    "manufacturer": "Accurate",
                     "scope_summary": "(4) Stalls / Solid Phenolic / Overhead Braced",
+                    "installation_basis": "Furnished & Installed",
                     "source_files": [str(self.fixture_dir / "floor-2-partitions.xlsx")],
                 },
             ],
@@ -104,7 +110,9 @@ class BidBuilderTests(unittest.TestCase):
         model = bid_builder.build_model(job, ROOT / "job.json", self.catalog, self.clauses)
         self.assertFalse(model["client_ready"])
         self.assertTrue(any("naming_line" in item for item in model["blockers"]))
+        self.assertTrue(any("partition manufacturer" in item for item in model["blockers"]))
         self.assertTrue(any("partition scope summary" in item for item in model["blockers"]))
+        self.assertTrue(any("installation basis" in item for item in model["blockers"]))
 
     def test_outputs_model_reconciliation_and_docx(self):
         job_path = ROOT / "examples/job.example.json"
@@ -118,6 +126,25 @@ class BidBuilderTests(unittest.TestCase):
             bid_builder.write_docx(model, output / "proposal.docx")
             self.assertGreater((output / "proposal.docx").stat().st_size, 10000)
             self.assertIn("$4,440.00", (output / "reconciliation.md").read_text())
+
+            from docx import Document
+
+            document = Document(output / "proposal.docx")
+            text = "\n".join(
+                [paragraph.text for paragraph in document.paragraphs]
+                + [cell.text for table in document.tables for row in table.rows for cell in row.cells]
+            )
+            for phrase in (
+                "Quote is good for 30 Days",
+                "Proposal # Q10001",
+                "Per Plans Dated:",
+                "NON CREDIT CUSTOMERS:",
+                "Toilet Partitions By: Accurate",
+                "Qty.",
+                "Manufacturer Name",
+                "Proposal Expiration & Potential Escalation",
+            ):
+                self.assertIn(phrase, text)
 
 
 if __name__ == "__main__":

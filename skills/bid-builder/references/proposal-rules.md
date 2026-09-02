@@ -14,6 +14,7 @@ Build one proposal model per grouping explicitly approved in the intake line. Mu
 ## Partitions
 
 - The spreadsheet price can establish the section total.
+- The partition manufacturer must be supplied explicitly for the customer-facing `Toilet Partitions By:` line.
 - The public description must come from explicit scope input, such as `(5) Stalls / Powder Coated / Overhead Braced`.
 - Never derive stall count or construction type from row count, quantity, filename, or description fragments.
 
@@ -23,7 +24,11 @@ Apply `item-catalog.json` rules in order. Prefer exact item matches, then descri
 
 ## Clauses
 
-The included clauses are a normalized starting library, not approved legal language. Set `clauses_approved: true` only after the operating company has reviewed the selected profile. Until then, generated documents must display `DRAFT — NOT FOR ISSUE`.
+The included clauses reproduce the structure of the supplied reference proposal but remain a controlled starting library, not approved legal language. Ask about approval in the first intake packet. Set `clauses_approved: true` only after the operating company has reviewed the selected profile. Until then, generated documents must display a restrained `DRAFT - NOT FOR ISSUE` notice and the reconciliation report must retain the blocker.
+
+## Visual system
+
+Treat the supplied B212492 proposal as the visual authority: white page, company logo and contact block, black Arial typography, thin black grids, red section-label highlight, yellow price highlight, compact accessory schedule, detailed commercial terms, and signature line. Do not replace it with a generic colored dashboard/report aesthetic.
 
 ## Money and auditability
 
